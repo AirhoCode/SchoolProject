@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Airho.dev">
+    <meta name="description" content="My Portfolio as a Junior Web Developer">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="compliment.css">
+    <link rel="stylesheet" href="intersection.css">
+    <link rel="stylesheet" href="union.css">
+    <link rel="stylesheet" href="subset.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="main.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('6tdgW0ERFFiKXTOfH');
+        })();
+    </script>
+    <title>Airho Code | Web Developer</title>
+</head>
+
+<body>
+    <header>
+        <!-- NAVIGATION -->
+        <nav>
+            <input id="nav-toggle" type="checkbox">
+            <div class="nav-logo">AIRHO<strong>CODE</strong></div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#union">Union</a>
+                </li>
+                <li>
+                    <a href="#intersection">Intersection</a>
+                </li>
+                <li>
+                    <a href="#compliment">Compliment</a>
+                </li>
+                <li>
+                    <a href="#subset">Subset</a>
+                </li>
+            </ul>
+            <label for="nav-toggle" class="nav-icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HOME -->
+        <article id="home">
+
+            <section class="home-img">
+                <div class="home-pic">
+                    <div class="home-filter"></div>
+                </div>
+            </section>
+
+
+            <section class="home-content">
+                <div class="home-text">
+                    <h1>I'm Airho</h1>
+                    <p>a passionate web designer <span>and developer.</span></p>
+                </div>
+
+                <div class="home-links">
+                    <a href="https://www.linkedin.com/in/airho-code/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/AirhoCode" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.facebook.com/airhoooo" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/airho.e/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+
+
+                <div class="home-skills">
+                    <p>Tech Stack</p>
+                    <ul>
+                        <li>
+                            <i class="fa-brands fa-html5"></i>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-js"></i>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
+
+        <article id="union">
+            <div class="union-section">
+                <h1>Notation UNION</h1>
+
+                <label for="setA">Set A:</label>
+                <input type="text" id="setA" placeholder="Enter Set A">
+
+                <label for="setB">Set B:</label>
+                <input type="text" id="setB" placeholder="Enter Set B">
+
+                <button onclick="mergeSets()">Submit</button>
+
+                <h4>Result:</h4>
+                <p id="unionSet"></p>
+            </div>
+        </article>
+
+
+        <article id="intersection">
+            <div class="intersection-section">
+                <h1>Notation INTERSECTION</h1>
+
+                <label for="setA2">Set A:</label>
+                <input type="text" id="setA2" placeholder="Enter Set A">
+
+                <label for="setB2"> Set B:</label>
+                <input type="text" id="setB2" placeholder="Enter Set B">
+
+                <button onclick="findMatchingCharacters()">Submit</button>
+
+                <h4>Result:</h4>
+                <p id="intersectionSet"></p>
+            </div>
+        </article>
+
+
+        <article id="compliment">
+            <div class="compliment-section">
+                <h1>Notation COMPLIMENT</h1>
+
+                <label for="setA3">Set A:</label>
+                <input type="text" id="setA3" placeholder="Enter Set A" />
+
+                <label for="setB3">Set B:</label>
+                <input type="text" id="setB3" placeholder="Enter Set B" />
+
+                <button onclick="findAndMerge()">Submit</button>
+
+                <h4>Result:</h4>
+                <p id="complimentSet"></p>
+            </div>
+        </article>
+
+        <article id="subset">
+            <div class="subset-section">
+                <h1>Notation SUBSET</h1>
+
+                <label for="setA4">Set A:</label>
+                <input type="text" id="setA4" placeholder="Enter Set A">
+
+                <label for="setB4">Set B:</label>
+                <input type="text" id="setB4" placeholder="Enter Set B">
+
+                <button onclick="findCombinations()">Submit</button>
+
+                <h4>Result:</h4>
+                <p id="subsetSet"></p>
+            </div>
+        </article>
+
+        <article id="contact">
+
+            <section class="contact-title">
+                <h1>CONTACT</h1>
+                <p>Have a question or want to <span class="contact-nowrap">work together?</span></p>
+            </section>
+
+
+            <section class="contact-form">
+                <input id="fullName" type="text" placeholder="Name" required>
+                <input id="email_id" type="email" placeholder="Email" required>
+                <textarea id="message" required placeholder="Your Message"></textarea>
+                <button onclick="SendMail()"><i class="fa-regular fa-paper-plane"></i> Send</button>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+
+        <section class="footer-copyright">
+            <p>© 2023 AIRHO<strong>CODE</strong></p>
+        </section>
+
+
+        <section class="footer-links">
+            <a href="https://www.linkedin.com/in/airho-code/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/AirhoCode" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.facebook.com/airhoooo" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/airho.e/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </section>
+
+    </footer>
+</body>
+
+</html>
